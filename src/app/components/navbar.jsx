@@ -22,7 +22,7 @@ const Navbar = () => {
             <div id={NavbarCss.topBar}>
               <div className="container">
                 <div className='d-flex justify-content-between align-items-center'>
-                  <div>
+                  <div id={NavbarCss.topContactInfo}>
                     <ul>
                       <li><MdLocalPhone /> +880 1478 25478 </li>
                       <li> | <MdOutlineEmail /> email@gmail.com</li>

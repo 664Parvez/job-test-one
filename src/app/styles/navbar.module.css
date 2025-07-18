@@ -28,3 +28,12 @@
     font-size: 23px;
     cursor: pointer;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #topContactInfo {
+        margin: auto;
+    }
+    #topSocialIcon {
+        display: none;
+    }
+}
