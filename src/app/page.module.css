@@ -1,167 +1,333 @@
-.page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-
-  display: grid;
-  grid-template-rows: 20px 1fr 20px;
-  align-items: center;
-  justify-items: center;
-  min-height: 100svh;
-  padding: 80px;
-  gap: 64px;
-  font-family: var(--font-geist-sans);
+#hero {
+    padding: 30px 0;
+}
+#hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: var(--first-color);
+}
+#hero a {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#hero a:hover {
+    background-color: transparent;
+    outline: 1px solid var(--first-color);
+    color: var(--first-color);
+}
+#hero_section_image {
+    position: relative;
+}
+.hero_img_two {
+    position: absolute;
+    left: 0;
+    width: 80% !important;
+    border-radius: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+#second_section {
+    padding: 50px 0;
+}
+#section_title h2 {
+    font-size: 40px;
+    color: var(--first-color);
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2;
+#secon_section_four_box {
+    background-color: var(--first-color);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--white-color);
+}
+#second_section_icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+#secon_section_four_box:hover {
+    background-color: var(--second-color);
+    transition: .3s ease-in-out;
 }
 
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
+#third_section {
+    padding: 50px 0;
+}
+#third_section img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#third_section #thirdTitleBox {
+    background-color: var(--first-color);
+    padding: 15px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#third_section #thirdTitleBox h4 {
+    margin-bottom: 0;
+    color: var(--white-color);
 }
 
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
+#brand_value_section {
+    padding: 50px 0;
 }
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-.ctas {
-  display: flex;
-  gap: 16px;
-}
-
-.ctas a {
-  appearance: none;
-  border-radius: 128px;
-  height: 48px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  transition:
-    background 0.2s,
-    color 0.2s,
-    border-color 0.2s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--foreground);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--gray-alpha-200);
-  min-width: 158px;
-}
-
-.footer {
-  grid-row-start: 3;
-  display: flex;
-  gap: 24px;
-}
-
-.footer a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footer img {
-  flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-@media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .main {
-    align-items: center;
-  }
-
-  .main ol {
-    text-align: center;
-  }
-
-  .ctas {
-    flex-direction: column;
-  }
-
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
-
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
+#brand_value_full {
+    position: relative;
+    display: flex;
     justify-content: center;
-  }
+    align-items: center;
+}
+#brand_value_full img {
+    border-radius: 10px;
+}
+#brand_value_section #brand_value_box {
+    position: absolute;
+    background: rgba(26, 26, 26, 0.2);
+    backdrop-filter: blur(17px);
+    width: 400px;
+    color: var(--white-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+#brand_value_section #brand_value_box h2 {
+    font-size: 40px;
+}
+#brand_value_section #brand_value_box a {
+    background-color: var(--white-color);
+    color: var(--black-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+#forth_section {
+    padding: 100px 0;
+    background-image: url("../../public/how-to-speed-up-computer-1625759076.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#forth_section h2 {
+    font-size: 40px;
+    color: var(--first-color);
+}
+#forth_section a {
+    outline: 1px solid var(--first-color);
+    margin-top: 30px;
+}
+#forth_section a:hover {
+    outline: none;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
+#fifth_section {
+    padding: 50px 0;
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#fifth_section h2 {
+    color: var(--second-color);
+    font-size: 40px;
+}
+#fifth_section h4 {
+    color: var(--second-color);
+}
+#fifth_section ul li {
+    padding: 5px 0;
+}
+#fifth_section ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+#fifth_section ul li a:hover {
+    text-decoration: underline;
+}
+
+#sixth_section {
+    padding: 100px 0;
+    background-image: url("../../public/2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#six_section_boxs {
+    background-color: var(--white-color);
+    padding: 25px;
+    border-radius: 10px;
+}
+#sixth_section a {
+    color: var(--second-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+#sixth_section a:hover {
+    color: var(--first-color);
+}
+
+#seventh_section {
+    padding: 100px 0;
+    background-image: url("../../public/roman-kraft-WOzVqzpScrk-unsplash-1-scaled.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#seventh_section_box {
+    background-color: var(--white-color);
+    padding: 25px;
+    border-radius: 10px;
+}
+#seventh_section h3 {
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--first-color);
+}
+#seventh_section h5 {
+    font-size: 25px;
+    font-weight: 500;
+}
+#seventh_section a {
+    outline: 1px solid var(--first-color);
+    margin-top: 30px;
+}
+#seventh_section a:hover {
+    outline: none;
+    background-color: var(--second-color);
+    color: var(--white-color);
+}
+
+#eight_section {
+    padding: 50px 0;
+    background-color: var(--second-color);
+}
+#eight_section h3 {
+    color: var(--white-color);
+    font-size: 40px;
+}
+#eight_section p {
+    color: var(--white-color);
+} 
+#eight_section button {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+#eight_section button:hover {
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #hero h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+        color: var(--first-color);
+    }
+    #hero img {
+        margin-top: 20px;
+    }
+    #second_section {
+        padding: 30px 0;
+    }
+    #section_title h2 {
+        font-size: 30px;
+    }
+
+    #third_section {
+        padding: 30px 0;
+    }
+
+    #brand_value_section {
+        padding: 30px 0;
+    }
+    #brand_value_section #brand_value_box {
+        width: 80%;
+    }
+    #brand_value_section #brand_value_box h2 {
+        font-size: 30px;
+    }
+
+    #forth_section {
+        padding: 30px 0;
+    }
+    #forth_section h2 {
+        font-size: 30px;
+    }
+    #mobile_hide_img {
+        display: none;
+    }
+
+    #fifth_section {
+        padding: 30px 0;
+    }
+    #fifth_section h2 {
+        font-size: 30px;
+    }
+    #fifth_section h4 {
+        margin-top: 20px;
+    }
+
+    #sixth_section {
+        padding: 30px 0;
+    }
+
+    #seventh_section {
+        padding: 30px 0;
+    }
+    #seventh_section h3 {
+        font-size: 35px;
+    }
+
+    #eight_section {
+        padding: 30px 0;
+    }
+    #eight_section h3 {
+        font-size: 30px;
+    }
+    #eight_section input {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    #hero_section_image {
+        margin-top: 20px;
+    }
+    #second_section {
+        padding: 30px 0;
+    }
+    #third_section {
+        padding: 30px 0;
+    }
+    #brand_value_section {
+        padding: 30px 0;
+    }
+    #brand_value_section #brand_value_box {
+        width: 500px;
+    }
+    #forth_section {
+        padding: 30px 0;
+    }
+    .tab_hide_img {
+        display: none;
+    }
+    #fifth_section {
+        padding: 30px 0;
+    }
+    #sixth_section {
+        padding: 30px 0;
+    }
+    #seventh_section {
+        padding: 30px 0;
+    }
+    #seventh_section h3 {
+        font-size: 35px;
+    }
+    #eight_section {
+        padding: 30px 0;
+    }
+    #eight_section input {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    #seventh_section h3 {
+        font-size: 40px;
+    }
 }

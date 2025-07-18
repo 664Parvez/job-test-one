@@ -1,0 +1,47 @@
+#main_footer {
+    padding: 50px;
+}
+#main_footer img {
+    width: 260px !important;
+}
+#getDirec {
+    color: var(--first-color);
+}
+#socialMedia ul li {
+    display: inline-block;
+    margin-left: 15px;
+}
+#socialMedia ul li a {
+    color: var(--first-color);
+}
+#socialMedia ul li:first-child {
+    margin-left: 0;
+}
+#infoItem li a {
+    color: var(--first-color);
+}
+#infoCustomer li a {
+    color: var(--first-color);
+}
+
+#copywrite {
+    background-color: var(--first-color);
+    padding: 15px 0;
+}
+#copywrite p {
+    color: var(--white-color);
+}
+#copywrite p a {
+    color: var(--second-color);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    #main_footer {
+        padding: 30px 0;
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    #main_footer {
+        padding: 30px 0;
+    }
+}

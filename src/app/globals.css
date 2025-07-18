@@ -1,42 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --first-color: #1D355A;
+  --second-color: #FF7163;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --bg-color: #fffff1;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --first-font: "Jost", sans-serif;
+  --second-font: "Montserrat", sans-serif;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-color: var(--bg-color);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--first-font);
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  font-family: var(--second-font) !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+p, span, label, small, input {
+  font-family: var(--second-font);
+}
+p {
+  font-weight: 500;
+}
+
+input::placeholder {
+  font-size: 18px;
+  font-family: var(--first-font);
 }
