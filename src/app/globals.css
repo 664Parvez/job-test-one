@@ -26,6 +26,7 @@ body {
 ul {
   list-style: none;
   padding-left: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,7 +37,7 @@ a {
   font-family: var(--second-font) !important;
 }
 
-p, span, label, small, input {
+p, span, label, small, input, li {
   font-family: var(--second-font);
 }
 p {

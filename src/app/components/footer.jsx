@@ -6,9 +6,7 @@ import FooterCss from "../styles/footer.module.css"
 import Logo from "../../../public/website-logo.png"
 
 import { MdArrowOutward, MdLocalPhone, MdOutlineEmail } from "react-icons/md";
-import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin, FaYoutube, FaShippingFast, FaCreditCard } from "react-icons/fa";
-import { BiSupport } from "react-icons/bi";
-import { RiMoneyPoundCircleLine } from "react-icons/ri";
+import { FaMapMarkerAlt, FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 const footer = () => {
 

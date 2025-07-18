@@ -1,0 +1,30 @@
+#topBar {
+    background-color: var(--first-color);
+    padding: 5px 0;
+}
+#topBar ul li {
+    display: inline-block;
+    color: var(--white-color);
+}
+#topSocialIcon li {
+    margin-right: 10px;
+}
+#topSocialIcon li:last-child {
+    margin-right: 0;
+}
+#topSocialIcon li a {
+    color: var(--white-color);
+}
+
+#navbar {
+    padding: 5px 0;
+    background-color: var(--white-color);
+}
+#navbar img {
+    width: 200px !important;
+}
+
+#hambarIcon {
+    font-size: 23px;
+    cursor: pointer;
+}
