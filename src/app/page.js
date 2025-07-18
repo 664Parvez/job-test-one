@@ -1,6 +1,10 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import homeStyles from "./page.module.css";
+
+import {motion} from "motion/react"
 
 // Icons
 import { LuBrain } from "react-icons/lu";
@@ -31,18 +35,33 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-5">
-                <h1>We Create Websites</h1>
+                <motion.h1
+                    initial={{y: -50, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: .5, delay: .3}}
+                >We Create Websites</motion.h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ducimus enim harum officia quis doloremque culpa eaque nihil? Quos ratione odio illum error consequuntur temporibus eius enim quam, rerum asperiores veritatis ab aliquam assumenda voluptatem esse dolores debitis neque et.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos temporibus iure blanditiis tempora!</p>
 
-                <div className="mt-4">
+                <motion.div
+                    initial={{x: -50, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: .5}} 
+                className="mt-4">
                   <Link href="/portfolio" className="btn btn-lg">View Portfolio</Link>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-7">
                 <div id={homeStyles.hero_section_image}>
-                  <Image src={hero} width={0} height={0} className={homeStyles.hero_img_one} layout="responsive" alt=""></Image>
-                  <Image src={hero2} width={0} height={0} className={homeStyles.hero_img_two} layout="responsive" alt=""></Image>
+                    <Image src={hero} width={0} height={0} className={homeStyles.hero_img_one} layout="responsive" alt=""></Image>
+                  <motion.div
+                    initial={{x: 100, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: .5}}
+                    className={homeStyles.hero_img_two}
+                    >
+                      <Image src={hero2} width={0} height={0} layout="responsive" alt=""></Image>
+                    </motion.div>
                 </div>
               </div>
             </div>
@@ -54,38 +73,58 @@ export default function Home() {
         <div id={homeStyles.second_section}>
           <div className="container">
             <div className="text-center" id={homeStyles.section_title}>
-              <h2>Epic Design and Development</h2>
+              <motion.h2
+                initial={{y: -50, opacity: 0}}
+                whileInView={{y: 0, opacity: 1}}
+                transition={{duration: .5}}
+              >Epic Design and Development</motion.h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia hic facere quod in earum iure. Error exercitationem eligendi consequatur velit! Error exercitationem eligendi consequatur.</p>
             </div>
 
             <div className="row mt-5">
               <div className="col-lg-3 col-md-6 mt-3">
-                <div id={homeStyles.secon_section_four_box} className="text-center">
+                <motion.div
+                    initial={{y: 80, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: .8, delay: .2}}
+                id={homeStyles.secon_section_four_box} className="text-center">
                   <LuBrain id={homeStyles.second_section_icon} />
                   <h4>Strategy</h4>
                   <p className="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum eos perspiciatis officiis repudiandae esse deserunt.</p>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-3 col-md-6 mt-3">
-                <div id={homeStyles.secon_section_four_box} className="text-center">
+                <motion.div
+                    initial={{y: 80, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: .8, delay: .4}}
+                id={homeStyles.secon_section_four_box} className="text-center">
                   <FaCode id={homeStyles.second_section_icon} />
                   <h4>Branding</h4>
                   <p className="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum eos perspiciatis officiis repudiandae esse deserunt.</p>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-3 col-md-6 mt-3">
-                <div id={homeStyles.secon_section_four_box} className="text-center">
+                <motion.div
+                    initial={{y: 80, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: .8, delay: .6}}
+                id={homeStyles.secon_section_four_box} className="text-center">
                   <FaMicrophoneAlt id={homeStyles.second_section_icon} />
                   <h4>Development</h4>
                   <p className="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum eos perspiciatis officiis repudiandae esse deserunt.</p>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-3 col-md-6 mt-3">
-                <div id={homeStyles.secon_section_four_box} className="text-center">
+                <motion.div
+                    initial={{y: 80, opacity: 0}}
+                    whileInView={{y: 0, opacity: 1}}
+                    transition={{duration: .8, delay: .8}}
+                id={homeStyles.secon_section_four_box} className="text-center">
                   <IoMdColorPalette id={homeStyles.second_section_icon} />
                   <h4>Web Design</h4>
                   <p className="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque dolorum eos perspiciatis officiis repudiandae esse deserunt.</p>
-                </div>
+                </motion.div>
               </div>
             </div>
 
@@ -97,46 +136,86 @@ export default function Home() {
         <div id={homeStyles.third_section}>
           <div className="container">
             <div className="text-center" id={homeStyles.section_title}>
-                <h2>Portfolio</h2>
+                <motion.h2
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5}}
+                >Portfolio</motion.h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia hic facere quod Doloremque dolorum eos perspiciatis officiis in earum iure. Error exercitationem eligendi consequatur adipisicing elit. Quia hic facere quod in earum iure velit!</p>
             </div>
 
             <div className="row">
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t1} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>Website Design</h4>
-                </div>
+                <motion.div 
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5}}
+                >
+                  <Image src={t1} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>Website Design</h4>
+                  </div>
+                </motion.div>
               </div>
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t2} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>Mobile Application</h4>
-                </div>
+                <motion.div
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .2}}
+                >
+                  <Image src={t2} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>Mobile Application</h4>
+                  </div>
+                </motion.div>
               </div>
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t3} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>Corporate Design</h4>
-                </div>
+                <motion.div
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .4}}
+                >
+                  <Image src={t3} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>Corporate Design</h4>
+                  </div>
+                </motion.div>
               </div>
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t4} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>App Development</h4>
-                </div>
+                <motion.div
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .6}}
+                >
+                  <Image src={t4} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>App Development</h4>
+                  </div>
+                </motion.div>
               </div>
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t5} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>Responsive Design</h4>
-                </div>
+                <motion.div
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .8}}
+                >
+                  <Image src={t5} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>Responsive Design</h4>
+                  </div>
+                </motion.div>
               </div>
               <div className="col-lg-4 col-md-6 mt-3">
-                <Image src={t6} width={0} height={0} layout="responsive" alt=""></Image>
-                <div id={homeStyles.thirdTitleBox} className="text-center">
-                  <h4>Digital Product</h4>
-                </div>
+                <motion.div
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: 1}}
+                >
+                  <Image src={t6} width={0} height={0} layout="responsive" alt=""></Image>
+                  <div id={homeStyles.thirdTitleBox} className="text-center">
+                    <h4>Digital Product</h4>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -147,7 +226,11 @@ export default function Home() {
         <div id={homeStyles.brand_value_section}>
           <div className="container">
             <div id={homeStyles.brand_value_full}>
-                <div id={homeStyles.brand_value_box}>
+                <motion.div
+                    initial={{scale: 1.3, opacity: 0}}
+                    whileInView={{scale: 1, opacity: 1}}
+                    transition={{duration: 1,}}
+                id={homeStyles.brand_value_box}>
                   <div className="text-center">
                     <h2>Brand Values</h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis aperiam ab nesciunt numquam nobis nisi.</p>
@@ -155,7 +238,7 @@ export default function Home() {
                       <Link href="/about-us" className="btn">Learn More</Link>
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 <div className="row align-items-center">
                   <div className="col-lg-6">
                     <div className="my-2">
@@ -182,11 +265,21 @@ export default function Home() {
             <div className="row">
               <div className="col-lg-6 col-md-4"></div>
               <div className="col-lg-6 col-md-8">
-                <h2>Construction and Renovation Projects</h2>
+                <motion.h2
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5}}
+                className="mb-5">Construction and Renovation Projects</motion.h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste, aliquam! Impedit debitis eveniet, veniam asperiores alias molestiae adipisci rem veritatis repellat velit tempora dolorem eum doloribus in ut quibusdam facere voluptatum dicta nemo! Non laudantium eum sint, vero at obcaecati labore laboriosam assumenda eius repellat.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, laborum. Eius, veritatis similique? Quisquam, ea?</p>
 
-                <Link href="/contact" className="btn btn-lg">Contact Us</Link>
+                <motion.div 
+                  initial={{x: 100, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: .5}}
+                >
+                  <Link href="/contact" className="btn btn-lg">Contact Us</Link>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -197,13 +290,21 @@ export default function Home() {
         <div id={homeStyles.fifth_section}>
           <div className="container">
             <div className="text-center" id={homeStyles.section_title}>
-                <h2>What We Do ?</h2>
+                <motion.h2
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5}}
+                >What We Do ?</motion.h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia hic facere quod Doloremque dolorum eos perspiciatis officiis in earum iure. Error exercitationem eligendi consequatur adipisicing elit. Quia hic facere quod in earum iure velit!</p>
             </div>
 
             <div className="row mt-5">
               <div className="col-lg-4">
-                <h4>Stratrgy.</h4>
+                <motion.h4
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .3}}
+                >Stratrgy.</motion.h4>
                 <hr />
                 <ul className="mt-3">
                   <li><MdArrowOutward /> <Link href="">Analytics and Research</Link></li>
@@ -215,7 +316,11 @@ export default function Home() {
                 </ul>
               </div>
               <div className="col-lg-4">
-                <h4>Design.</h4>
+                <motion.h4
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .6}}
+                >Design.</motion.h4>
                 <hr />
                 <ul className="mt-3">
                   <li><MdArrowOutward /> <Link href="">Creative Direction</Link></li>
@@ -227,7 +332,11 @@ export default function Home() {
                 </ul>
               </div>
               <div className="col-lg-4">
-                <h4>Development.</h4>
+                <motion.h4
+                  initial={{y: -50, opacity: 0}}
+                  whileInView={{y: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .9}}
+                >Development.</motion.h4>
                 <hr />
                 <ul className="mt-3">
                   <li><MdArrowOutward /> <Link href="">System Architecture Design</Link></li>
@@ -249,22 +358,34 @@ export default function Home() {
             <div className="row">
               <div className="col-lg-7 col-md-6"></div>
               <div className="col-lg-5 col-md-6">
-                <div id={homeStyles.six_section_boxs} className="my-4">
+                <motion.div
+                  initial={{x: 100, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .3}}
+                id={homeStyles.six_section_boxs} className="my-4">
                   <h3>Branding Strategy</h3>
                   <p className="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quia cum eius dignissimos at eaque doloremque, praesentium et ab culpa sed mollitia officiis deserunt consequatur?</p>
 
                   <div className="mt-4">
                     <Link href="">Read More <MdArrowOutward /></Link>
                   </div>
-                </div>
-                <div id={homeStyles.six_section_boxs} className="my-4">
+                </motion.div>
+                <motion.div
+                  initial={{x: 100, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .6}}
+                id={homeStyles.six_section_boxs} className="my-4">
                   <h3>Designing Logos</h3>
                   <p className="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quia cum eius dignissimos at eaque doloremque, praesentium et ab culpa sed mollitia officiis deserunt consequatur?</p>
-                </div>
-                <div id={homeStyles.six_section_boxs} className="my-4">
+                </motion.div>
+                <motion.div
+                  initial={{x: 100, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .9}}
+                id={homeStyles.six_section_boxs} className="my-4">
                   <h3>Branding Identity</h3>
                   <p className="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, quia cum eius dignissimos at eaque doloremque, praesentium et ab culpa sed mollitia officiis deserunt consequatur?</p>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -276,12 +397,16 @@ export default function Home() {
           <div className="container">
             <div className="row">
               <div className="col-lg-5 col-md-6">
-                <div id={homeStyles.seventh_section_box}>
+                <motion.div
+                  initial={{scale: 1.3, opacity: 0}}
+                  whileInView={{scale: 1, opacity: 1}}
+                  transition={{duration: .5, delay: .3}}
+                id={homeStyles.seventh_section_box}>
                   <h3>Crafting Digital Experiences</h3>
                   <h5>Join the elit ranks of sustained value creators</h5>
                   <p className="mt-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores dolores tempore amet architecto consequatur illum officia numquam iusto eligendi omnis.</p>
                   <Link href="/contact-us" className="btn btn-lg"> Contact Us </Link>
-                </div>
+                </motion.div>
               </div>
               <div className="col-lg-7 col-md-6"></div>
             </div>
@@ -294,13 +419,21 @@ export default function Home() {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-lg-6">
-                <h3>Subscribe to Our Newsletter</h3>
+                <motion.h3
+                  initial={{x: -100, opacity: 0}}
+                  whileInView={{x: 0, opacity: 1}}
+                  transition={{duration: .5, delay: .3}}
+                >Subscribe to Our Newsletter</motion.h3>
                 <p className="mb-0">Sign up for our newsletter and get 10% off your first purchase. Get it Now quickly</p>
               </div>
               <div className="col-lg-6">
                 <form action="">
                   <input type="email" placeholder="Enter your email . . ." className="form-control form-control-lg" />
-                  <button className="btn btn-lg mt-3">Subscribe</button>
+                  <motion.button
+                    initial={{x: 100, opacity: 0}}
+                    whileInView={{x: 0, opacity: 1}}
+                    transition={{duration: .5, delay: .3}}
+                  className="btn btn-lg mt-3">Subscribe</motion.button>
                 </form>
               </div>
             </div>

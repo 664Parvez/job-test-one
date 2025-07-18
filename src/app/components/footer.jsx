@@ -1,7 +1,11 @@
+"use client"
+
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import FooterCss from "../styles/footer.module.css"
+
+import {motion} from "motion/react"
 
 import Logo from "../../../public/website-logo.png"
 
@@ -15,15 +19,26 @@ const footer = () => {
   return (
     <>
         <footer>
-
             {/* Copywrite */}
-            <div id={FooterCss.main_footer}>
+            <motion.div
+
+                initial={{y: 50, opacity: 0}}
+                whileInView={{y: 0, opacity: 1}}
+                transition={{duration: .5}}
+
+            id={FooterCss.main_footer}>
               <div className="container">
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-lg-4 col-md-6">
                             <div id={FooterCss.contactInfo}>
-                                <Image src={Logo} width={0} height={0} layout='responsive' alt=''></Image>
+                                <motion.div
+                                    initial={{scale: 0, opacity: 0}}
+                                    whileInView={{scale: 1, opacity: 1}}
+                                    transition={{duration: .5, delay: .3}}
+                                >
+                                    <Image src={Logo} width={0} height={0} layout='responsive' alt=''></Image>
+                                </motion.div>
                                 <div className="my-4">
                                     <ul>
                                         <li><MdLocalPhone /> 315-666-6688</li>
@@ -78,7 +93,7 @@ const footer = () => {
                     </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
             {/* Copywrite */}
 
             {/* Copywrite */}
