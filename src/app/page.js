@@ -55,7 +55,7 @@ export default function Home() {
                 <div id={homeStyles.hero_section_image}>
                     <Image src={hero} width={0} height={0} className={homeStyles.hero_img_one} layout="responsive" alt=""></Image>
                   <motion.div
-                    initial={{x: 100, opacity: 0}}
+                    initial={{x: 50, opacity: 0}}
                     whileInView={{x: 0, opacity: 1}}
                     transition={{duration: .5}}
                     className={homeStyles.hero_img_two}
